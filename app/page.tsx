@@ -1,13 +1,9 @@
-import {AppProps} from "next/app";
-import {ThemeProvider} from "styled-components";
-import {GlobalStyles} from "./styles/GlobalStyles";
-import {theme} from "./styles/Theme";
+"use client"
 
-export default function Home({Component, pageProps}: AppProps) {
+export default function Home() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Component {...pageProps} /> {/* 페이지 컴포넌트 */}
-    </ThemeProvider>
+    <main>
+      <h1>Welcome to Next.js!</h1>
+    </main>
   );
 }

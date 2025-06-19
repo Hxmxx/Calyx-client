@@ -28,7 +28,7 @@ export const theme = {
             Info: "3B82F6" ,
             Success: "22C55E" ,
             Warning: "" ,
-            Error: ,
+            Error: "",
         },
         Text: {
             black: {

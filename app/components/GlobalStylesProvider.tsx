@@ -1,7 +1,8 @@
 "use client"
 
-import { GlobalStyles } from "@/app/styles/GlobalStyles";
+import { Global } from "@emotion/react";
+import { globalStyles } from "@/app/styles/GlobalStyles";
 
 export const GlobalStylesProvider = () => {
-  return <GlobalStyles />;
+  return <Global styles={globalStyles} />;
 }; 

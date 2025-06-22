@@ -1,14 +1,14 @@
 "use client"
 
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { theme } from "@/app/styles/Theme";
-import { GlobalStyles } from "@/app/styles/GlobalStyles";
+import { ThemeProvider as EmotionThemeProvider, Global } from "@emotion/react";
+import { THEME } from "@/app/styles/Theme";
+import { globalStyles } from "@/app/styles/GlobalStyles";
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   return (
-    <StyledThemeProvider theme={theme}>
-      <GlobalStyles />
+    <EmotionThemeProvider theme={THEME}>
+      <Global styles={globalStyles} />
       {children}
-    </StyledThemeProvider>
+    </EmotionThemeProvider>
   );
 }; 

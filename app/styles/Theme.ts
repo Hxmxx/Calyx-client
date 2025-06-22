@@ -15,12 +15,6 @@ export const Z_INDEX = {
     tooltip: 1060,
 } as const;
 
-export const FONT_FAMILY = {
-    "SFPro": "SF Pro",
-    "Pretendard": "Pretendard Variable",
-    "Inter": "Inter"
-} as const;
-
 export const THEME = {
     colors: {
         Primary: {
@@ -73,24 +67,24 @@ export const THEME = {
         },
     },
     spacing: {
-        xs: "0.5rem", // 4px
-        sm: "1rem", // 8px
-        md: "1.5rem", // 12px
-        lg: "2rem", // 16px
-        xl: "2.5rem", // 20px
-        xxl: "3rem", // 24px
-        xxxl: "3.5rem", // 28px
-        xxxxl: "4rem", // 32px
-        xxxxxl: "6rem", // 48px
-        xxxxxxl: "8rem", // 64px
+        xs: "0.25rem", // 4px
+        sm: "0.5rem", // 8px
+        md: "0.75rem", // 12px
+        lg: "1rem", // 16px
+        xl: "1.25rem", // 20px
+        xxl: "1.5rem", // 24px
+        xxxl: "1.75rem", // 28px
+        xxxxl: "2rem", // 32px
+        xxxxxl: "3rem", // 48px
+        xxxxxxl: "4rem", // 64px
     },
     typography: {
         Display: {
-            fontSize: "5rem", // 40px
+            fontSize: "2.5rem", // 40px
             fontWeight: "bold",
         },
         Heading: {
-            fontSize: "3rem", // 24px
+            fontSize: "1.5rem", // 24px
             fontWeight: "semibold",
         },
         Body: {

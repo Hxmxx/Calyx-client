@@ -1,4 +1,27 @@
-export const theme = {
+// Common values
+export const BREAKPOINTS = {
+    mobile: '320px',
+    tablet: '768px',
+    desktop: '1024px',
+    wide: '1440px',
+} as const;
+
+export const Z_INDEX = {
+    dropdown: 1000,
+    sticky: 1020,
+    fixed: 1030,
+    modal: 1040,
+    popover: 1050,
+    tooltip: 1060,
+} as const;
+
+export const FONT_FAMILY = {
+    "SFPro": "SF Pro",
+    "Pretendard": "Pretendard Variable",
+    "Inter": "Inter"
+} as const;
+
+export const THEME = {
     colors: {
         Primary: {
             Light : "#F2EFFF",
@@ -25,102 +48,60 @@ export const theme = {
             Darker: "#594B4E",
         },
         Semantic: {
-            Info: "3B82F6" ,
-            Success: "22C55E" ,
-            Warning: "" ,
-            Error: "",
+            Info: "#3B82F6", // Blue
+            Success: "#10B981", // Green
+            Warning: "#F59E0B", // Amber
+            Error: "#EF4444", // Red
         },
         Text: {
-            dark: {
-                50: "#C5CCDB",
-                100: "#9FA6B5",
-                200: "#79808F",
-                300: "#545B6A",
-                400: "#2E3544",
-                500: "#080F1E",
-                600: "#000000",
-                700: "#000000",
-                800: "#000000",
-                900: "#000000",
-
-                opacity: {
-                    20: "0.20",
-                    40: "0.40",
-                    60: "0.60",
-                    80: "0.80",
-                    100: "1.00",
-                }
+            Dark: "#000000",
+            White: "#2B2B2F",
+            Disabled: {
+                Color: "#000000",
+                Opacity: "0.3"
             },
-            white: {
-                50: "#FFFFFF",
-                100: "#FFFFFF",
-                200: "#FFFFFF",
-                300: "#FFFFFF",
-                400: "#FFFFFF",
-                500: "#F6F6F6",
-                600: "#D0D0D0",
-                700: "#ABABAB",
-                800: "#858585",
-                900: "#5F5F5F",
+        },
+        Glass: {
+            Background: {
+                Color: "#FFFFFF",
+                Opacity: "0.1"
+            },
+            Surface: {
+                Color: "#FFFFFF",
+                Opacity: "0.3"
             }
         },
-        background: {
-            light: "#f9f9f9",
-            dark: "#151515",
-        },
-        spacing: {
-            xs: "0.5rem",
-            sm: "1rem",
-            md: "1.5rem",
-            lg: "2rem",
-            xl: "3rem",
-            xxl: "4rem",
-        },
-        typography: {
-            titleLg: {
-                pcSize: "48px",
-                mobileSize : "30px",
-                fontWeight: "SemiBold",
-                lineHeight: "120%",                
-            },
-            titleMd: {
-                pcSize: "32px",
-                mobileSize : "26px",
-                fontWeight: "SemiBold",
-                lineHeight: "120%",                  
-            },
-            titleSm: {
-                pcSize: "24px",
-                mobileSize : "20px",
-                fontWeight: "SemiBold",
-                lineHeight: "130%",                  
-            },
-            textLg: {
-                pcSize: "18px",
-                mobileSize : "18px",
-                fontWeight: "SemiBold",
-                lineHeight: "140%",                   
-            },
-            textMd: {
-                pcSize: "16px",
-                mobileSize : "18px",
-                fontWeight: "Regular",
-                lineHeight: "140%",             
-            },
-            textSm: {
-                pcSize: "48px",
-                mobileSize : "16px",
-                fontWeight: "Regular",
-                lineHeight: "140%",                 
-            },
-            caption: {
-                pcSize: "48px",
-                mobileSize : "14px",
-                fontWeight: "Regular",
-                lineHeight: "140%",                 
-            },
-        },
     },
-};
+    spacing: {
+        xs: "0.5rem", // 4px
+        sm: "1rem", // 8px
+        md: "1.5rem", // 12px
+        lg: "2rem", // 16px
+        xl: "2.5rem", // 20px
+        xxl: "3rem", // 24px
+        xxxl: "3.5rem", // 28px
+        xxxxl: "4rem", // 32px
+        xxxxxl: "6rem", // 48px
+        xxxxxxl: "8rem", // 64px
+    },
+    typography: {
+        Display: {
+            fontSize: "5rem", // 40px
+            fontWeight: "bold",
+        },
+        Heading: {
+            fontSize: "3rem", // 24px
+            fontWeight: "semibold",
+        },
+        Body: {
+            fontSize: "1rem", // 16px
+            fontWeight: "normal",
+        },
+        Caption: {
+            fontSize: "0.75rem", // 12px
+            fontWeight: "regular",
+        }
+    },
+} as const;
 
-export type ThemeType = typeof theme;
+export type ThemeType = typeof THEME;

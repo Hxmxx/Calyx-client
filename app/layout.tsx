@@ -1,6 +1,6 @@
-import "./globals.css";
-import { ThemeProvider } from "@/app/components/ThemeProvider";
-import { GlobalStylesProvider } from "@/app/components/GlobalStylesProvider";
+import './globals.css';
+import { ThemeProvider } from '@/app/components/ThemeProvider';
+import { GlobalStylesProvider } from '@/app/components/GlobalStylesProvider';
 
 export default function RootLayout({
   children,

@@ -6,19 +6,21 @@ Calyx 프로젝트에 기여해주셔서 감사합니다! 이 문서는 프로�
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - Bun 1.0.0+
 - Git
 
 ### Setup
 
 1. **Repository 클론**
+
    ```bash
    git clone https://github.com/your-username/calyx.git
    cd calyx
    ```
 
 2. **의존성 설치**
+
    ```bash
    bun install
    ```
@@ -86,6 +88,7 @@ git commit -m "docs(readme): update installation instructions"
 ```
 
 **커밋 타입:**
+
 - `feat`: 새로운 기능
 - `fix`: 버그 수정
 - `docs`: 문서 변경
@@ -224,4 +227,4 @@ bun run test:coverage
 
 ---
 
-더 자세한 정보는 프로젝트 README를 참조하세요. 
+더 자세한 정보는 프로젝트 README를 참조하세요.

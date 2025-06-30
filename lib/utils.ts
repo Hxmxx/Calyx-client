@@ -302,7 +302,7 @@ export const storageUtils = {
     /**
      * 로컬 스토리지에 안전하게 저장
      */
-    setItem: (key: string, value: any): void => {
+    setItem: (key: string, value: unknown): void => {
         try {
             localStorage.setItem(key, JSON.stringify(value));
         } catch (error) {
@@ -358,7 +358,7 @@ export const errorUtils = {
 };
 
 // Export all utilities
-export default {
+const utils = {
     dateUtils,
     hashtagUtils,
     titleUtils,
@@ -368,3 +368,5 @@ export default {
     storageUtils,
     errorUtils,
 };
+
+export default utils;

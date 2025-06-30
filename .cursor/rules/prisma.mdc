@@ -1,0 +1,94 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+📄 prisma.mdc
+
+# Prisma Integration Guideline for Spring Boot + PostgreSQL
+
+This document outlines the approach for integrating Prisma with a Spring Boot + PostgreSQL stack. While Prisma is generally used in Node.js ecosystems, it can also serve as a **database schema modeling and migration tool**, especially useful in multi-stack environments or with a GraphQL gateway.
+
+## ⚙️ Usage Context
+
+We are using Prisma primarily for:
+
+- **DB schema modeling** (clear & type-safe)
+- **SQL migration management**
+- **Type-safe client (optional - not used in Spring directly)**
+- Cross-team alignment (Node.js-based tools can read the same DB schema)
+
+> Note: Spring Boot will interact with the DB using **JPA/Hibernate**, but Prisma provides a clean DSL for schema design and migration control.
+
+---
+
+## 📁 Directory
+
+/infrastructure/prisma/
+├── schema.prisma         # Main schema definition
+├── migrations/           # Auto-generated SQL migration files
+├── .env                  # Database connection (used by Prisma CLI)
+
+---
+
+## 🧱 schema.prisma
+
+```prisma
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Example model
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+```
+
+
+⸻
+```
+🌐 .env
+
+DATABASE_URL="postgresql://<user>:<password>@localhost:5432/<db>?schema=public"
+```
+⸻
+
+📦 Migration Command (for dev use)
+
+npx prisma migrate dev --name init
+
+Creates SQL files in /migrations and applies them to the PostgreSQL database.
+
+⸻
+
+🧩 Integration with Spring Boot
+
+Since Prisma’s generated client is not used inside Spring Boot:
+	-	DB schema changes are driven from Prisma
+	-	Spring Boot reads the updated schema via JPA/Hibernate
+	-	Prisma migration is the single source of truth
+
+⸻
+
+✅ Advantages
+	-	Better team alignment across Node.js and Java stacks
+	-	Easy-to-read schema definitions
+	-	Reliable versioned migration control
+	-	Shared DB modeling DSL for documentation
+
+⸻
+
+⚠️ Notes
+	-	Make sure only one source (Prisma OR Spring) manages schema changes
+	-	Prisma’s generated TypeScript client is not used in Spring Boot
+	-	Keep prisma/schema.prisma in sync with any DB design changes

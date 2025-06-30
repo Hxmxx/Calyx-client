@@ -1,0 +1,58 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Cursor Rules
+
+## 1. Cursor Movement
+
+- The cursor moves one character at a time with arrow keys.
+- Holding Shift + Arrow keys will select text character by character.
+- Ctrl + Arrow keys moves the cursor by one word.
+- Home key moves cursor to the beginning of the line.
+- End key moves cursor to the end of the line.
+- Page Up / Page Down scrolls the viewport while keeping cursor position if possible.
+
+## 2. Selection Rules
+
+- Text selection can be expanded or reduced by using Shift + Arrow keys.
+- Double-click selects the current word.
+- Triple-click selects the entire line.
+- Holding Shift + Click extends the selection from the current cursor position to the clicked position.
+
+## 3. Multi-Cursor Support
+
+- Ctrl + Click adds a new cursor at the clicked position.
+- Ctrl + Shift + L selects all occurrences of the current selection and creates multiple cursors.
+- Editing with multiple cursors simultaneously applies changes at all cursor positions.
+
+## 4. Auto Indentation
+
+- Pressing Enter inserts a new line with the same indentation level as the previous line.
+- When typing `{`, `(`, or `[`, the editor auto-indents the next line.
+- Pressing Backspace at the start of an indented line removes indentation.
+
+## 5. Special Cases
+
+- When typing quotes `"`, `'`, or backticks `` ` ``, the editor automatically inserts the closing character and places the cursor between.
+- For paired symbols like `{}`, `()`, `[]`, typing the opening symbol inserts the closing pair automatically.
+- Pressing Delete removes characters to the right of the cursor.
+- Pressing Backspace removes characters to the left of the cursor.
+
+## 6. Undo / Redo
+
+- Ctrl + Z undoes the last action.
+- Ctrl + Y or Ctrl + Shift + Z redoes the undone action.
+- Undo history maintains cursor positions for seamless editing.
+
+## 7. Clipboard Operations
+
+- Ctrl + C copies the selected text.
+- Ctrl + X cuts the selected text.
+- Ctrl + V pastes from the clipboard at the cursor position.
+
+## 8. Accessibility
+
+- Keyboard navigation fully supported.
+- Screen reader compatibility ensured.

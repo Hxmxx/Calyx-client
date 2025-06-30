@@ -1,0 +1,80 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Blueprint Document
+
+## 1. Product Overview
+
+- Product Name: Calyx
+- Purpose: A web-based marketing tool platform aimed at supporting one-person content creators in managing content creation, scheduling, hashtag generation, and title analysis using AI.
+- Target Users: Solo content creators on platforms such as YouTube, Instagram, TikTok, and Blogs.
+
+## 2. Business Goals
+
+- Provide an integrated, user-friendly platform for content creators to streamline their workflow.
+- Increase user engagement by offering AI-powered suggestions and analytics.
+- Support monetization by improving content discoverability and quality.
+
+## 3. User Needs
+
+- Simplified content scheduling and calendar management.
+- Automated hashtag generation based on content topics.
+- Intelligent title analysis and improvement suggestions.
+- Secure and seamless Google OAuth authentication.
+- Performance and responsiveness suitable for daily active usage.
+
+## 4. Key Features
+
+| Feature             | Description                                                               | Priority |
+|---------------------|---------------------------------------------------------------------------|----------|
+| Content Calendar    | Visual scheduling tool for managing publishing dates and content types.   | High     |
+| Hashtag Generator   | AI-powered hashtag recommendations based on keywords or content description.| High     |
+| Title Analyzer      | Analyzes titles to improve SEO and engagement potential.                  | Medium   |
+| User Authentication | Google OAuth login and secure session management.                         | High     |
+| Feedback System     | Collects user feedback for continuous product improvement.               | Low      |
+
+## 5. Functional Requirements
+
+### Calendar Management
+- Add, edit, delete content schedule entries.
+- Filter and sort content by date, platform, or status.
+
+### Hashtag Generation
+- Input keywords or short descriptions.
+- Return a list of relevant hashtags using OpenAI API.
+- Save history for reuse.
+
+### Title Analysis
+- Input title text.
+- Provide a score and suggestions for improvement.
+- Visualize score changes.
+
+### Authentication
+- Google OAuth sign-in.
+- JWT token issuance and validation.
+- Session management.
+
+### Feedback
+- Simple form to submit suggestions or report bugs.
+- Store feedback securely.
+
+## 6. Non-functional Requirements
+
+- Responsive design for desktop and mobile devices.
+- Fast load times and optimized API response.
+- Secure handling of user data and authentication.
+- Scalable architecture to support growing user base.
+
+## 7. Success Metrics
+
+- Monthly Active Users (MAU) growth rate.
+- Average session duration.
+- User satisfaction scores from feedback.
+- Reduction in manual hashtag and title creation time.
+
+// 주석:  
+// - 본 문서는 제품의 전반적인 요구사항을 명확히 하여 프로젝트 진행 시 참고용으로 사용됩니다.
+// - 우선순위는 비즈니스 및 사용자 니즈를 고려해 산정하였습니다.
+// - 추가 변경사항은 팀 내 협의를 통해 반영합니다.

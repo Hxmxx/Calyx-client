@@ -1,0 +1,108 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Calyx Development Guideline
+
+---
+
+## 1. File Naming Convention
+
+- Use **kebab-case** for filenames (e.g., `user-profile.tsx`, `hashtag-list.ts`).
+- Use **PascalCase** for component names (e.g., `UserProfile`, `LoginForm`).
+- Use **camelCase** for functions, variables, and hooks (e.g., `getHashtags`, `useTitleAnalyzer`).
+
+---
+
+## 2. Folder Structure
+
+- Group files by **feature domain**, not by type (feature-based architecture).
+- Components must reside inside their related `features/*/components` folder unless globally reused.
+- Shared logic (hooks, utils, types) must go under the `shared/` directory.
+
+---
+
+## 3. Code Style
+
+- Follow **Prettier** for formatting.
+- Enforce **ESLint** rules and fix warnings before commits.
+- Use **TypeScript** strictly. Avoid using `any`.
+
+---
+
+## 4. Component Design
+
+- Components must be **presentational or container-based**.
+- Each component should:
+  - Be **small**, **reusable**, and **testable**
+  - Accept **props** for flexibility
+  - Avoid side effects if possible
+- UI components must live under `components/ui`.
+
+---
+
+## 5. Styling
+
+- Use **Emotion CSS-in-JS**.
+- Theme values (colors, spacing, font sizes) must be imported from `styles/theme.ts`.
+- Avoid inline styles unless dynamic and scoped.
+
+---
+
+## 6. State Management
+
+- Use **Zustand** for local/global state management.
+- For server state (e.g., API), use **React Query**.
+- Never combine both state managers for the same domain.
+
+---
+
+## 7. API Integration
+
+- Use `shared/api/client.ts` (Axios) for all API requests.
+- Define endpoints in `shared/api/endpoints.ts`.
+- API typing must be strictly defined in `shared/types/api.types.ts`.
+
+---
+
+## 8. Git & Branching
+
+- Branch naming: `feature/{name}`, `fix/{bug}`, `hotfix/{urgent}`, `chore/{task}`
+- Use **Pull Requests** for all merges to `main`.
+- Every PR must be reviewed by at least one team member.
+- Commit messages follow:  
+  `type(scope): message`  
+  e.g., `feat(calendar): add content modal`
+
+---
+
+## 9. Testing
+
+- Use **Jest** and **React Testing Library** for unit tests.
+- Write tests for components, hooks, and utils.
+- Each feature should have a minimum of 70% coverage before deployment.
+
+---
+
+## 10. Documentation
+
+- Every module (component, hook, API) must include JSDoc-style comments.
+- If a file includes logic that is not self-evident, write inline comments in English.
+// 복잡한 로직이 있는 경우 주석으로 설명을 남겨야 합니다.
+
+---
+
+## 11. Communication
+
+- Use Discord or Notion for asynchronous updates.
+- Stand-ups every Monday morning.
+- Code review sessions every Thursday.
+
+---
+
+## 12. Deployment
+
+- Use Vercel for frontend CI/CD.
+- Backend CI/CD via GitHub Actions → Docker → Cloud deployment (TBD).
+- Feature preview links must be attached to PRs.

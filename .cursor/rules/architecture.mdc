@@ -1,0 +1,82 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+아래는 요청하신 내용을 포함하여 architecture.mdc 파일에 넣을 수 있는 형태로, 컨벤션, 도메인 지식, 에이전트 워크플로우 부분도 추가한 예시입니다. 주석은 한국어, 본문은 영어로 작성했습니다.
+
+# Project Architecture
+
+This document outlines the overall architecture of the Calyx project, including the libraries used and the directory structure for both frontend and backend.
+
+## Library
+
+- **Frontend**
+  - React 18 (Next.js App Router)
+  - TypeScript
+  - Emotion CSS for styling
+  - Zustand for state management
+  - React Query for server state synchronization
+  - OpenAI API client for AI-powered features
+  - Bun for fast running
+
+- **Backend**
+  - Spring Boot (planned)
+  - RESTful API design
+  - JWT for authentication token management
+  - OpenAI integration for AI services
+
+- **DataBase**
+  - MySQL or PostgreSQL
+
+## Directory Structure
+
+### Frontend (`/client`)
+
+client/
+├── public/
+├── app/
+├── components/
+│   ├── ui/
+│   ├── layout/
+│   └── common/
+├── features/
+│   ├── hashtag/
+│   ├── title-analyzer/
+│   ├── calendar/
+│   └── auth/
+├── shared/
+├── styles/
+├── lib/
+├── .env.local
+├── package.json
+├── tsconfig.json
+└── next.config.js
+
+## File Responsibilities and Commenting Convention
+  - Each folder and file has a clear responsibility to maintain modularity and scalability.
+  - Frontend folders such as app/, components/, features/, shared/, styles/, and lib/ are organized by function to enable independent development.
+  - Backend services (planned in Spring Boot) will handle API, authentication, business logic, and AI integrations separately.
+
+## Conventions
+
+- **Code Style:** Follow consistent code formatting using Prettier and ESLint configurations.
+- **Component Naming:** Use PascalCase for React components and camelCase for variables/functions.
+- **Folder Structure:** Feature-based grouping inside `features/` for scalability and maintainability.
+- **API Layer:** Centralize API calls inside `shared/api` with clear endpoint definitions and typings.
+- **State Management:** Use Zustand for local/global state and React Query for server state.
+- **Styling:** Use Emotion with theme tokens defined in `styles/theme.ts`.
+- **Commenting** All source code, documentation, and rule files should be written primarily in English to maintain international readability. However, when adding comments or explanations within the code or documentation, please write those comments in Korean.
+
+## Domain Knowledge
+
+- **Content Creator Workflow:** Focus on supporting 1-person content creators with scheduling, hashtag generation, and title analysis.
+- **Content Platforms:** Support major platforms like YouTube, Instagram, TikTok, and Blogs.
+- **Authentication:** Google OAuth integration to provide seamless sign-in.
+- **AI Integration:** Use OpenAI APIs to enhance content discovery and analysis.
+
+## Agent Workflow
+
+- **Frontend Flow:** User interacts via React UI → API calls sent to backend → backend processes requests (e.g., OpenAI, DB) → results returned and displayed.
+- **Backend Flow:** Spring Boot REST API receives requests → performs authentication and validation → executes business logic → queries database or external APIs → returns response.
+- **AI Agent Integration:** Backend communicates with OpenAI API asynchronously, caching or storing results as needed for performance.

@@ -20,7 +20,7 @@ export const THEME = {
       Primary: {
           Light : "#EDF5F4",
           Light_hover: "#E4F0EE",
-          Light_active: "#E4F0EE",
+          Light_active: "#C7E0DC",
           Normal: "#4A9B8E",
           Normal_hover: "#438C80",
           Normal_active: "#3B7C72",

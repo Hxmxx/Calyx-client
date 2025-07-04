@@ -15,86 +15,181 @@ export const Z_INDEX = {
   tooltip: 1060,
 } as const;
 
+export const FONT_FAMILY = {
+  SFPro: 'SF Pro',
+  Pretendard: 'Pretendard Variable',
+  Inter: 'Inter',
+  Playfair: 'Playfair Display, serif',
+  InterSans: 'Inter, system-ui, sans-serif',
+} as const;
+
 export const THEME = {
   colors: {
-      Primary: {
-          Light : "#EDF5F4",
-          Light_hover: "#E4F0EE",
-          Light_active: "#C7E0DC",
-          Normal: "#4A9B8E",
-          Normal_hover: "#438C80",
-          Normal_active: "#3B7C72",
-          Dark: "#38746B",
-          Dark_hover: "#2C5D55",
-          Dark_active: "#214640",
-          Darker: "#1A3632",
-      },
-      Secondary: {
-          Light: "#FDFBF8",
-          Light_hover: "#FBF9F4",
-          Light_active: "#F7F2E9",
-          Normal: "#E6D5B7",
-          Normal_hover: "#CFC0A5",
-          Normal_active: "#B8AA92",
-          Dark: "#ADA089",
-          Dark_hover: "#8A806E",
-          Dark_active: "#676052",
-          Darker: "#514B40",
-      },
-      Semantic: {
-          Info: "#3B82F6", // Blue
-          Success: "#10B981", // Green
-          Warning: "#F59E0B", // Amber
-          Error: "#EF4444", // Red
+    Primary: {
+      Light: '#E6F0FF',
+      Light_hover: '#D9E7FF',
+      Light_active: '#B3CCFF',
+      Normal: '#1E40AF',
+      Normal_hover: '#1B3A9E',
+      Normal_active: '#18348C',
+      Dark: '#1E3A8A',
+      Dark_hover: '#172554',
+      Dark_active: '#0F172A',
+      Darker: '#0B1426',
+    },
+    Secondary: {
+      Light: '#FFFBFC',
+      Light_hover: '#FFF9FA',
+      Light_active: '#FFF3F5',
+      Normal: '#FFD7E0',
+      Normal_hover: '#E6C2CA',
+      Normal_active: '#CCACB3',
+      Dark: '#BFA1A8',
+      Dark_hover: '#998186',
+      Dark_active: '#736165',
+      Darker: '#594B4E',
+    },
+    Calyx: {
+      Primary: '#6071F1',
+      PrimaryHover: '#5A67D8',
+      Secondary: '#4FD1C5',
+      SecondaryHover: '#38B2AC',
+      Background: '#F9FAFB',
+      BackgroundAlt: '#E2E8F0',
+      Accent: {
+        Green: '#C6F6D5',
+        Peach: '#FEEBC8',
+        Purple: '#E9D5FF',
+        Blue: '#DBEAFE',
       },
       Text: {
-          Dark: "#000000",
-          White: "#2B2B2F",
-          Disabled: {
-              Color: "#000000",
-              Opacity: "0.3"
-          },
+        Primary: '#2D3748',
+        Secondary: '#4A5568',
+        Muted: '#718096',
+        Light: '#A0AEC0',
       },
       Glass: {
-          Background: {
-              Color: "#FFFFFF",
-              Opacity: "0.1"
-          },
-          Surface: {
-              Color: "#FFFFFF",
-              Opacity: "0.3"
-          }
+        Background: 'rgba(255, 255, 255, 0.1)',
+        Surface: 'rgba(255, 255, 255, 0.3)',
+        Border: 'rgba(255, 255, 255, 0.2)',
       },
+      Gradient: {
+        Primary: 'linear-gradient(135deg, #6071F1 0%, #4FD1C5 100%)',
+        Secondary: 'linear-gradient(135deg, #C6F6D5 0%, #FEEBC8 100%)',
+        Background: 'linear-gradient(180deg, #F9FAFB 0%, #E2E8F0 100%)',
+      },
+    },
+    Semantic: {
+      Info: '#3B82F6',
+      Success: '#10B981',
+      Warning: '#F59E0B',
+      Error: '#EF4444',
+    },
+    Text: {
+      Dark: '#000000',
+      White: '#2B2B2F',
+      Disabled: {
+        Color: '#000000',
+        Opacity: '0.3',
+      },
+    },
+    Glass: {
+      Background: {
+        Color: '#FFFFFF',
+        Opacity: '0.1',
+      },
+      Surface: {
+        Color: '#FFFFFF',
+        Opacity: '0.3',
+      },
+    },
   },
   spacing: {
-      xs: "0.25rem", // 4px
-      sm: "0.5rem", // 8px
-      md: "0.75rem", // 12px
-      lg: "1rem", // 16px
-      xl: "1.25rem", // 20px
-      xxl: "1.5rem", // 24px
-      xxxl: "1.75rem", // 28px
-      xxxxl: "2rem", // 32px
-      xxxxxl: "3rem", // 48px
-      xxxxxxl: "4rem", // 64px
+    0: '0',
+    1: '0.25rem',
+    2: '0.5rem',
+    3: '0.75rem',
+    4: '1rem',
+    5: '1.25rem',
+    6: '1.5rem',
+    8: '2rem',
+    10: '2.5rem',
+    12: '3rem',
+    16: '4rem',
+    20: '5rem',
+    24: '6rem',
+    32: '8rem',
   },
   typography: {
-      Display: {
-          fontSize: "2.5rem", // 40px
-          fontWeight: "bold",
-      },
-      Heading: {
-          fontSize: "1.5rem", // 24px
-          fontWeight: "semibold",
-      },
-      Body: {
-          fontSize: "1rem", // 16px
-          fontWeight: "normal",
-      },
-      Caption: {
-          fontSize: "0.75rem", // 12px
-          fontWeight: "regular",
-      }
+    fontFamily: {
+      sans: ['Inter', 'system-ui', 'sans-serif'],
+      mono: ['JetBrains Mono', 'Consolas', 'monospace'],
+      serif: ['Playfair Display', 'serif'],
+      display: ['Playfair Display', 'serif'],
+      body: ['Inter', 'system-ui', 'sans-serif'],
+    },
+    fontSize: {
+      xs: '0.75rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '3.75rem',
+      '7xl': '4.5rem',
+      '8xl': '6rem',
+    },
+    fontWeight: {
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+      extrabold: 800,
+    },
+    lineHeight: {
+      none: 1,
+      tight: 1.25,
+      snug: 1.375,
+      normal: 1.5,
+      relaxed: 1.625,
+      loose: 2,
+    },
+  },
+  shadows: {
+    sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+    base: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+    md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+    lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+    xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+    '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+    inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+    calyx: {
+      soft: '0 4px 20px rgba(96, 113, 241, 0.15)',
+      glow: '0 0 30px rgba(79, 209, 197, 0.3)',
+      glass: '0 8px 32px rgba(0, 0, 0, 0.1)',
+    },
+  },
+  borderRadius: {
+    none: '0',
+    sm: '0.125rem',
+    base: '0.25rem',
+    md: '0.375rem',
+    lg: '0.5rem',
+    xl: '0.75rem',
+    '2xl': '1rem',
+    '3xl': '1.5rem',
+    full: '9999px',
+  },
+  transitions: {
+    fast: '150ms ease-in-out',
+    base: '200ms ease-in-out',
+    slow: '300ms ease-in-out',
+    smooth: '400ms cubic-bezier(0.4, 0, 0.2, 1)',
+    bounce: '600ms cubic-bezier(0.68, -0.55, 0.265, 1.55)',
   },
 } as const;
 
